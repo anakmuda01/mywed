@@ -1,0 +1,89 @@
+<template>
+  <q-page>
+    <div
+      class="row justify-center items-center q-gutter-sm"
+      style="height: 100vh"
+    >
+      <div class="col-11 col-md-4">
+        <div
+          class="bg-flower"
+          :style="{
+            backgroundImage: `url(${flowerPath})`,
+            height: '5em',
+            marginBottom: '3px',
+          }"
+        ></div>
+        <q-card class="q-mb-sm bg-deep-orange-9">
+          <q-card-section class="text-center pacifico-text text-h4">
+            Sholihin & Inayati
+          </q-card-section>
+        </q-card>
+        <q-card class="q-mb-sm bg-deep-orange-9">
+          <q-card-section class="text-center">
+            <div>Kepada Yth.</div>
+            <div class="q-mb-sm">Bapak/Ibu/Saudara/i</div>
+            <div class="q-mb-sm text-h6 satisfy-text">
+              Keluarga Besar Unit Pengembangan Bahasa UIN Antasari Banjarmasin
+            </div>
+            <div class="text-caption">
+              Mohon maaf apabila terdapat kesalahan dalam penulisan nama /
+              gelar.
+            </div>
+          </q-card-section>
+        </q-card>
+        <q-card class="q-mb-sm bg-deep-orange-9">
+          <q-card-section class="text-center">
+            <q-btn color="brown-9" @click="$emit('open')">Buka Undangan</q-btn>
+          </q-card-section>
+        </q-card>
+        <q-card
+          flat
+          v-if="$q.platform.is.mobile"
+          :class="$q.platform.is.mobile ? 'bg-bicycle-m' : 'bg-bicycle-g'"
+          :style="{
+            backgroundImage: `url(${bicyclePath})`,
+            height: '18em',
+          }"
+        >
+          <q-card-section> tes </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-11 col-md-4" v-if="!$q.platform.is.mobile">
+        <q-card
+          flat
+          :class="$q.platform.is.mobile ? 'bg-bicycle-m' : 'bg-bicycle-g'"
+          :style="{
+            backgroundImage: `url(${bicyclePath})`,
+            height: '30em',
+          }"
+        >
+          <q-card-section> tes </q-card-section>
+        </q-card>
+      </div>
+    </div>
+  </q-page>
+</template>
+
+<script setup>
+import bicyclePath from "@/assets/ba.png";
+import flowerPath from "@/assets/flower.png";
+</script>
+
+<style>
+.bg-bicycle-m {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.bg-bicycle-g {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.bg-flower {
+  background-repeat: no-repeat;
+}
+</style>
