@@ -22,7 +22,11 @@
           class="page-content"
           :class="{ 'page-content--hidden': isLoading }"
         >
-          <main-page v-if="isMain"></main-page>
+          <div class="row justify-center items-center">
+            <div class="col-12 col-lg-4">
+              <main-page v-if="isMain"></main-page>
+            </div>
+          </div>
         </div>
       </q-page>
     </q-page-container>
@@ -32,33 +36,7 @@
       enter-active-class="animated slideInUp"
       leave-active-class="animated fadeOut"
     >
-      <q-footer v-if="isMain" elevated class="bg-primary text-white">
-        <q-toolbar>
-          <q-toolbar-title> Navigation </q-toolbar-title>
-          <q-space />
-          <q-btn flat round dense icon="mdi-home" @click="$router.push('/')">
-            <q-tooltip>Home</q-tooltip>
-          </q-btn>
-          <q-btn
-            flat
-            round
-            dense
-            icon="account"
-            @click="$router.push('/profile')"
-          >
-            <q-tooltip>Profile</q-tooltip>
-          </q-btn>
-          <q-btn
-            flat
-            round
-            dense
-            icon="settings"
-            @click="$router.push('/settings')"
-          >
-            <q-tooltip>Settings</q-tooltip>
-          </q-btn>
-        </q-toolbar>
-      </q-footer>
+      <my-footer v-if="isMain"></my-footer>
     </transition>
   </q-layout>
 </template>
@@ -67,6 +45,7 @@
 import Cover from "./part/Cover.vue";
 import Loading from "./Loading.vue";
 import MainPage from "./part/main/MainPage.vue";
+import MyFooter from "./part/main/MyFooter.vue";
 import { ref } from "vue";
 
 const isLoading = ref(false);

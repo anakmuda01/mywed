@@ -14,7 +14,7 @@
           }"
         ></div>
         <q-card class="q-mb-sm bg-deep-orange-9">
-          <q-card-section class="text-center pacifico-text text-h4">
+          <q-card-section class="text-center cantik-text text-h4">
             Sholihin & Inayati
           </q-card-section>
         </q-card>
