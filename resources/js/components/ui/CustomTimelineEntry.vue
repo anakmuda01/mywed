@@ -6,12 +6,9 @@
     >
       {{ judul }}
     </div>
-    <div class="q-pa-sm text-center">
+    <div class="q-pa-sm text-center q-mt-xs">
       <text-underline-origin
         :text="underlineText"
-        :divider-width="dividerWidth"
-        :margin-top="marginTop"
-        :left="left"
         :color="underlineColor"
       ></text-underline-origin>
       <div class="row items-center justify-center">
@@ -30,13 +27,12 @@
       <div class="paci-text">Tempat</div>
       <div>{{ tempat }}</div>
       <div class="q-mt-lg">
-        <q-btn
+        <geo-button
           icon="location_on"
           color="brown"
-          dark
-          label="Open Map"
-          outline
-        ></q-btn>
+          lat="-3.449339"
+          lang="114.715244"
+        ></geo-button>
       </div>
     </div>
   </q-card>
@@ -44,6 +40,7 @@
 
 <script setup>
 import TextUnderlineOrigin from "./TextUnderlineOrigin.vue";
+import GeoButton from "./GeoButton.vue";
 const props = defineProps([
   "bg",
   "judul",

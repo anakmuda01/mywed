@@ -1,19 +1,14 @@
 <template>
-  <div class="column items-center q-mb-xs">
-    <div class="underline-text text-h5 satisfy-text" :class="`text-${color}`">{{ text }}</div>
-    <div
-      class="divider"
-      :style="{ width: dividerWidth, marginTop: marginTop, left: left }"
-    ></div>
+  <div class="column q-mb-xs">
+    <div class="underline-text text-h5 satisfy-text" :class="`text-${color}`">
+      <span>{{ text }}</span>
+    </div>
   </div>
 </template>
 
 <script setup>
 const props = defineProps([
   "text",
-  "dividerWidth",
-  "marginTop",
-  "left",
   "color",
 ]);
 </script>
@@ -21,13 +16,7 @@ const props = defineProps([
 <style>
 .underline-text {
   z-index: 1;
-}
-.divider {
-  background-color: #4e340d;
-  border: 0 solid #4e340d;
-  border-radius: 150px;
-  height: 0.21rem;
   position: relative;
-  overflow: hidden;
+  text-decoration: underline;
 }
 </style>

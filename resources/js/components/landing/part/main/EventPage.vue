@@ -25,7 +25,11 @@
     <q-card class="q-mt-xs">
       <q-card-section>
         <div class="row">
-          <div class="col-12 paci-text text-center">Save The Dates</div>
+          <div
+            class="col-12 paci-text text-center text-h5 bg-orange-10 text-white rounded-borders"
+          >
+            Save The Dates
+          </div>
           <div class="col-12">
             <q-timeline class="save-dates">
               <q-timeline-entry color="bg-main-1" icon="volunteer_activism">
@@ -37,7 +41,7 @@
                     underline-text="Jum'at"
                     divider-width="3.3rem"
                     margin-top="-9px"
-                    left="5px"
+                    left="9.4rem"
                     underline-color="lime-10"
                     bulan="juli"
                     angka="07"
@@ -54,10 +58,10 @@
                     style="top: -13px"
                     judul="Resepsi"
                     underline-text="Ahad / Minggu"
-                    divider-width="7.5rem"
+                    divider-width="2rem"
                     margin-top="-9px"
-                    left="5px"
-                    underline-color="red"
+                    left="7.3rem"
+                    underline-color="brown-10"
                     bulan="juli"
                     angka="09"
                     tahun="2023"
