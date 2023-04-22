@@ -1,6 +1,6 @@
 <template>
   <div class="column items-center">
-    <div class="text-h5">the wedding of</div>
+    <div class="text-h5">{{ text }}</div>
     <div class="divider">
       <span></span>
     </div>
@@ -46,7 +46,7 @@ const props = defineProps(["text"]);
 
 @keyframes moving {
   0% {
-   left: -50px;
+    left: -50px;
   }
   100% {
     left: 100%;

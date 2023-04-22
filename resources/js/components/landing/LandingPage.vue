@@ -23,7 +23,7 @@
           :class="{ 'page-content--hidden': isLoading }"
         >
           <div class="row justify-center items-center">
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-md-4">
               <main-page v-if="isMain"></main-page>
             </div>
           </div>

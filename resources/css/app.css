@@ -13,3 +13,27 @@
 .satisfy-text {
     font-family: 'Satisfy', cursive;
 }
+
+.bg-main-1 {
+    background-color: #ae8a70;
+}
+
+.bg-main-2 {
+    background-color: #5c493b;
+}
+
+.text-bg-main-1 {
+    color: #ae8a70;
+}
+
+.text-bg-main-2 {
+    color: #5c493b;
+}
+
+.bg-bg-main-1 {
+    background-color: #ae8a70 !important;
+}
+
+.bg-bg-main-2 {
+    background-color: #5c493b !important;
+}
