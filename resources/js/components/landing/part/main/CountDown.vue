@@ -1,7 +1,7 @@
 <template>
   <q-card>
     <div class="row justify-between">
-      <q-img class="rounded-borders" src="https://i.pinimg.com/736x/59/30/5e/59305e07eb1c170e88953a5694100162.jpg" style="height: 91vh">
+      <q-img class="rounded-borders" :src="front" style="height: 91vh">
         <div
           class="text-subtitle2 absolute-top text-center cd-title"
           style="padding-top: 37px"
@@ -59,6 +59,7 @@
 <script setup>
 import TextUnderline from "../../../ui/TextUnderline.vue";
 import bgFlower from "../../../../assets/bg-flower.jpg";
+import front from "@/assets/front.png";
 import { ref, onUnmounted } from "vue";
 
 const days = ref("");
@@ -104,10 +105,10 @@ onUnmounted(() => clearInterval(interval));
 }
 
 .cd-countdown {
-  padding-bottom: 80px !important;
+  padding-bottom: 71px !important;
   padding-top: 15px !important;
   color: white;
-  background: rgba(70 41 4, 0.6) !important;
+  background: rgba(70, 41, 4, 0.6) !important;
 }
 
 .cd-wrapper div {

@@ -8,6 +8,7 @@
         label="home"
         stack
         color="brown-7"
+        @click="scrollToDiv('home')"
       />
       <q-space></q-space>
       <q-btn
@@ -17,6 +18,7 @@
         label="couple"
         stack
         color="brown-7"
+        @click="scrollToDiv('couple')"
       />
       <q-space></q-space>
       <q-btn
@@ -26,6 +28,7 @@
         label="event"
         stack
         color="brown-7"
+        @click="scrollToDiv('event')"
       />
       <q-space></q-space>
       <q-btn
@@ -35,6 +38,7 @@
         label="story"
         stack
         color="brown-7"
+        @click="scrollToDiv('story')"
       />
       <q-space></q-space>
       <q-btn
@@ -44,10 +48,25 @@
         label="galery"
         stack
         color="brown-7"
+        @click="scrollToDiv('galery')"
       />
     </q-toolbar>
   </q-footer>
 </template>
+
+
+<script setup>
+const scrollToDiv = (e) => {
+  const element = document.getElementById(e);
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+};
+</script>
+
 
 <style>
 .footer-toolbar {
