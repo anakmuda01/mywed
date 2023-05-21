@@ -1,20 +1,25 @@
 <template>
   <q-card>
-    <div class="row justify-between">
-      <q-img class="rounded-borders" :src="front" style="height: 91vh">
+    <div class="row justify-between bg-brown-5">
+      <div class="col-12">
         <div
-          class="text-subtitle2 absolute-top text-center cd-title"
+          class="text-subtitle2 text-center cd-title"
           style="padding-top: 37px"
         >
           <text-underline
-            class="q-mb-lg"
+            class="q-mb-lg text-white"
             text="the wedding of"
           ></text-underline>
-          <div class="text-h4">
+          <div class="text-h4 text-white">
             <div class="cantik-text">Sholihin & Inayati</div>
           </div>
         </div>
-        <div class="absolute-bottom cd-countdown text-center">
+      </div>
+      <div class="col-12 text-center">
+        <q-img alt="corefront" :src="corefront" width="250px" ></q-img>
+      </div>
+      <div class="col-12 text-white bg-brown-10">
+        <div class="cd-countdown text-center">
           <q-chip square color="brown-10" dark class="q-mb-lg"
             >- 09 Juli 2023 -</q-chip
           >
@@ -51,15 +56,15 @@
             </div>
           </div>
         </div>
-      </q-img>
+      </div>
     </div>
   </q-card>
 </template>
 
 <script setup>
 import TextUnderline from "../../../ui/TextUnderline.vue";
-import bgFlower from "../../../../assets/bg-flower.jpg";
-import front from "@/assets/front.png";
+import front from "@/assets/front.jpg";
+import corefront from "@/assets/corefront.png";
 import { ref, onUnmounted } from "vue";
 
 const days = ref("");
@@ -107,8 +112,6 @@ onUnmounted(() => clearInterval(interval));
 .cd-countdown {
   padding-bottom: 71px !important;
   padding-top: 15px !important;
-  color: white;
-  background: rgba(70, 41, 4, 0.6) !important;
 }
 
 .cd-wrapper div {
