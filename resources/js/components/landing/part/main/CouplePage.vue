@@ -1,6 +1,13 @@
 <template>
-  <div>
-    <q-card class="q-mb-sm">
+  <div class="q-mt-sm">
+    <q-card
+      class="q-mb-xs"
+    >
+      <q-card-section class="text-center paci-text text-h5"
+        >Couple</q-card-section
+      >
+    </q-card>
+    <q-card class="q-mb-xs">
       <q-card-section>
         <div class="row items-center text-center">
           <div class="col-5">
