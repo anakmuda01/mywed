@@ -3,30 +3,32 @@
     <div
       :style="{
         position: 'absolute',
-        marginLeft: '10px',
-        height: '400px',
+        height: '311px',
         width: '100%',
         backgroundImage: `url(${LoveStoryBg})`,
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: '',
+        backgroundPosition: 'top left',
+        backgroundSize: 'contain',
+        top: 0,
       }"
     ></div>
-    <q-card
-      class="q-px-lg q-py-md"
-      style="background: transparent; padding-bottom: 170px"
-    >
-      <q-timeline color="orange" class="our-love-story">
-        <q-timeline-entry heading>
-          <q-card style="background: rgb(159, 144, 122, 0.4)">
-            <q-card-section
-              class="q-px-sm q-py-md paci-text text-h4 text-white"
-            >
-              Our Love's Story
-            </q-card-section>
-          </q-card>
-        </q-timeline-entry>
-
-        <q-timeline-entry v-for="(item, index) in events" :key="index">
+    <q-card class="q-px-md q-py-md" style="background: transparent">
+      <q-timeline
+        color="orange"
+        class="our-love-story q-pr-lg q-pt-lg q-pl-xs"
+        style="
+          margin-top: 187px;
+          background: rgb(159, 144, 122, 0.5);
+          border-radius: 5px;
+        "
+      >
+        <q-timeline-entry
+          v-for="(item, index) in events"
+          :key="index"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-out"
+        >
           <template v-slot:subtitle>
             <q-card style="top: -3px">
               <div class="q-pa-xs">
@@ -44,26 +46,11 @@
         </q-timeline-entry>
       </q-timeline>
     </q-card>
-    <div
-      :style="{
-        position: 'absolute',
-        marginLeft: '10px',
-        height: '200px',
-        width: '100%',
-        backgroundImage: `url(${LoveStoryBgBottom})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'top center',
-        backgroundSize: 'contain',
-        bottom: '4px',
-        right: '-30px',
-      }"
-    ></div>
   </div>
 </template>
 
 <script setup>
 import LoveStoryBg from "../../../../assets/love-story-bg.png";
-import LoveStoryBgBottom from "../../../../assets/couple_story_bg.png";
 const events = [
   {
     date: "16 November 2022",

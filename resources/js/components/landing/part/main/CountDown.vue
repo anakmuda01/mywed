@@ -16,7 +16,7 @@
         </div>
         <div class="absolute-bottom cd-countdown text-center">
           <q-chip square color="brown-10" dark class="q-mb-lg"
-            >- 07 Juli 2023 -</q-chip
+            >- 09 Juli 2023 -</q-chip
           >
           <div v-if="already" class="text-center text-h5">
             the event was started
@@ -67,7 +67,7 @@ const hours = ref("");
 const minutes = ref("");
 const seconds = ref("");
 
-const targetDateString = "07/07/2023, 010:00:00 PM WITA";
+const targetDateString = "07/9/2023, 010:00:00 PM WITA";
 const dateParts = targetDateString.split(/[\s,]+/);
 const [month, day, year] = dateParts[0].split("/");
 const [hour, minute, second] = dateParts[1].split(":");

@@ -26,13 +26,22 @@
       <q-card-section>
         <div class="row">
           <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-out"
             class="col-12 paci-text text-center text-h5 bg-orange-10 text-white rounded-borders"
           >
             Save The Dates
           </div>
           <div class="col-12">
             <q-timeline class="save-dates">
-              <q-timeline-entry color="bg-main-1" icon="volunteer_activism">
+              <q-timeline-entry
+                color="bg-main-1"
+                icon="volunteer_activism"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-out"
+              >
                 <template v-slot:subtitle>
                   <custom-timeline-entry
                     bg="bg-main-1"
@@ -51,7 +60,13 @@
                 </template>
               </q-timeline-entry>
 
-              <q-timeline-entry color="brown-10" icon="celebration">
+              <q-timeline-entry
+                color="brown-10"
+                icon="celebration"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-out"
+              >
                 <template v-slot:subtitle>
                   <custom-timeline-entry
                     bg="bg-main-2"

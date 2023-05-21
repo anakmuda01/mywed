@@ -32,4 +32,11 @@ import EventPage from "./EventPage.vue";
 import AyatSection from "./AyatSection.vue";
 import StorySection from "./StorySection.vue";
 import GallerySection from "./GallerySection.vue";
+
+import { onMounted } from "vue";
+import AOS from "aos";
+
+onMounted(() => {
+    AOS.init();
+})
 </script>

@@ -10,6 +10,8 @@ import "@quasar/extras/animate/slideInUp.css"
 import "quasar/src/css/index.sass";
 import { Quasar, Dialog, Loading, Notify } from 'quasar';
 
+import 'aos/dist/aos.css'
+
 import router from './router/router';
 
 import App from './components/App.vue';
