@@ -46,46 +46,119 @@
         </q-timeline-entry>
       </q-timeline>
     </q-card>
+
+    <q-card class="q-pa-sm q-mt-xs" style="position: relative; overflow: hidden">
+      <div
+        class="text-center q-pt-lg"
+        style="padding-bottom: 100px; background: #b05113; color: white"
+      >
+        <div
+          class="text-h6 cantik-text"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1500"
+        >
+          ❝Every <span class="text-h4 cantik-text">Love Story</span>
+        </div>
+        <div
+          class="text-h4 cantik-text"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1700"
+        >
+          is beautiful <span class="text-h6 cantik-text">and</span>
+        </div>
+        <div
+          class="text-h3 cantik-text"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1900"
+        >
+          Ours
+        </div>
+        <div
+          class="text-h4 cantik-text"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="2100"
+        >
+          is the most unique❞
+        </div>
+      </div>
+
+      <div
+        :style="{
+          position: 'absolute',
+          bottom: '-22px',
+          right: '10px',
+          height: '100px',
+          width: '100px',
+          backgroundImage: `url(${InayKursi})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'contain',
+        }"
+      ></div>
+
+      <div
+        :style="{
+          position: 'absolute',
+          bottom: '-22px',
+          left: '10px',
+          height: '100px',
+          width: '100px',
+          backgroundImage: `url(${SholKursi})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'contain',
+        }"
+      ></div>
+    </q-card>
   </div>
 </template>
 
 <script setup>
 import LoveStoryBg from "../../../../assets/love-story-bg.png";
+import SideBySide from "../../../../assets/sidebyside.jpg";
+import InayKursi from "../../../../assets/inaykursi.png";
+import SholKursi from "../../../../assets/sholkursi.png";
 const events = [
   {
-    date: "16 November 2022",
+    date: "16 Nov 2022",
     text: "Our 1st Chat (WA)",
   },
   {
-    date: "01 Desember 2022",
+    date: "01 Dec 2022",
     text: "His 1st Proposal",
   },
   {
-    date: "5 Desember 2022",
-    text: "She's not ready yet - the beginning of silent treatmen",
+    date: "5 Dec 2022",
+    text: "She's not ready yet - the beginning of silent treatment",
   },
   {
     date: "15 Feb 2023",
     text: "The end of silent treatment where our story began",
   },
   {
-    date: "11 Maret 2023",
-    text: "he proposed again and suggested her to pray istikhara, but she did it again. That's our last chat",
+    date: "11 Mar 2023",
+    text: "He proposed again and suggested her to pray istikhara, but she did it again. That's our last chat",
   },
   {
-    date: "16 Maret 2023",
-    text: "Her first istikhara prayer, and she give him a chance to meet her parents",
+    date: "16 Mar 2023",
+    text: "Her first istikhara prayer, and she gave him a chance to meet her parents",
   },
   {
-    date: "22 Maret 2023",
-    text: "He meet her parents alone~",
+    date: "22 Mar 2023",
+    text: "He met her parents alone~",
   },
   {
-    date: "26 Maret 2023",
-    text: "Our parents meet and We're officially engaged",
+    date: "26 Mar 2023",
+    text: "Our parents met and we're officially engaged",
   },
   {
-    date: "07 Juli 2023",
+    date: "07 Jul 2023",
     text: "Our brand-new day begins",
   },
 ];

@@ -2,9 +2,10 @@
   <div style="position: relative">
     <q-card
       :style="{
-        minHeight: '477px',
+        minHeight: '400px',
         backgroundImage: `url(${ayatbg})`,
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
         backgroundSize: 'cover',
       }"
     >
@@ -19,7 +20,12 @@
           </div>
           <div
             class="col-12 text-caption"
-            style="padding-left: 33px; padding-right: 33px"
+            style="
+              padding-left: 17px;
+              padding-right: 17px;
+              margin-top: 50px;
+              margin-bottom: 60px;
+            "
           >
             Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
             pasangan-pasangan untukmu dari jenismu sendiri, supaya kamu

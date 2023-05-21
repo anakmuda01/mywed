@@ -25,8 +25,9 @@
         >
       </div>
       <div class="paci-text">Tempat</div>
+      <div class="text-orange-10">{{rumah}}</div>
       <div>{{ tempat }}</div>
-      <div class="q-mt-lg">
+      <div class="q-my-md">
         <geo-button
           icon="location_on"
           color="brown"
@@ -52,6 +53,7 @@ const props = defineProps([
   "bulan",
   "angka",
   "tahun",
+  "rumah",
   "tempat",
 ]);
 </script>

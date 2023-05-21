@@ -17,7 +17,7 @@
             style="border-radius: 50%"
             width="100px"
             height="100px"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC9Nea7sJLpRggTwhoqvv_iKvPSNHiZSXvrQ&usqp=CAU"
+            :src="circle"
           />
         </div>
       </q-card-section>
@@ -55,7 +55,8 @@
                     bulan="juli"
                     angka="07"
                     tahun="2023"
-                    tempat="Komp. Borneo xxx, Jl. xxx RT. xx RW..xx"
+                    rumah="(Rumah Mempelai Wanita)"
+                    tempat="Jl. A. Yani Km. 21 Komp. Borneo Indah Jl. Mahoni H.9 RT. 001 RW 001"
                   ></custom-timeline-entry>
                 </template>
               </q-timeline-entry>
@@ -80,7 +81,8 @@
                     bulan="juli"
                     angka="09"
                     tahun="2023"
-                    tempat="Komp. Borneo xxx, Jl. xxx RT. xx RW..xx"
+                    rumah="(Rumah Mempelai Wanita)"
+                    tempat="Jl. A. Yani Km. 21 Komp. Borneo Indah Jl. Mahoni H.9 RT. 001 RW 001"
                   ></custom-timeline-entry>
                 </template>
               </q-timeline-entry>
@@ -95,6 +97,7 @@
 <script setup>
 import FlowerGaris from "../../../../assets/flower-garis.png";
 import CustomTimelineEntry from "../../../ui/CustomTimelineEntry.vue";
+import circle from "@/assets/circle.jpg";
 </script>
 
 <style>
