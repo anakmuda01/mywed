@@ -1,7 +1,7 @@
 <template>
   <q-card>
     <q-card-section>
-      <div class="row bg-brown" style="padding-bottom: 100px">
+      <div class="row bg-brown" style="padding-bottom: 50px">
         <div id="home" class="col-12 q-px-sm q-mt-sm">
           <count-down></count-down>
         </div>

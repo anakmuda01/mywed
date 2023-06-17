@@ -65,7 +65,7 @@
 <script setup>
 import TextUnderline from "../../../ui/TextUnderline.vue";
 import front from "@/assets/front.jpg";
-import corefront from "@/assets/corefront.png";
+import corefront from "@/assets/corefrontSmall.png";
 import { ref, onUnmounted } from "vue";
 
 const days = ref("");

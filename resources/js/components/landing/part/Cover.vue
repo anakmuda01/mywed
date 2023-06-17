@@ -43,6 +43,11 @@
             <q-btn color="brown-9" @click="$emit('open')">Buka Undangan</q-btn>
           </q-card-section>
         </q-card>
+        <div class="text-center">
+          <div class="cantik-text" style="color: black">
+            dev with <span class="text-red">❤</span> by <a target="_blank" href="https://www.instagram.com/fhmsholihin/">me</a>
+          </div>
+        </div>
         <q-card
           flat
           v-if="$q.platform.is.mobile"
@@ -52,7 +57,6 @@
             height: '18em',
           }"
         >
-          <q-card-section> tes </q-card-section>
         </q-card>
       </div>
       <div class="col-11 col-md-4" v-if="!$q.platform.is.mobile">
@@ -64,7 +68,6 @@
             height: '30em',
           }"
         >
-          <q-card-section> tes </q-card-section>
         </q-card>
       </div>
     </div>
@@ -82,8 +85,8 @@ const id = route.params.id;
 
 import { ref, onMounted } from "vue";
 
-import { useQuasar } from 'quasar';
-const $q = useQuasar()
+import { useQuasar } from "quasar";
+const $q = useQuasar();
 
 const item = ref({
   nama: null,
@@ -91,13 +94,16 @@ const item = ref({
 });
 
 onMounted(() => {
-    $q.loading.show();
-    axios.get(`/api/undangan/${id}`).then((response) => {
+  $q.loading.show();
+  axios
+    .get(`/api/undangan/${id}`)
+    .then((response) => {
       item.value = response.data;
-    }).finally(() => {
-      $q.loading.hide();
     })
-})
+    .finally(() => {
+      $q.loading.hide();
+    });
+});
 </script>
 
 <style>
