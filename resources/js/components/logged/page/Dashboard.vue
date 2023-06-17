@@ -3,7 +3,7 @@
     <q-page-container>
       <q-page>
         <div class="row justify-center" style="padding-bottom: 100px">
-          <div id="home" class="col-10 q-pa-md">
+          <div id="home" class="col-12 col-md-10 q-pa-md">
             <main-dashboard></main-dashboard>
           </div>
         </div>
