@@ -24,6 +24,9 @@
       <q-carousel-slide :name="8" :img-src="foto8" />
       <q-carousel-slide :name="9" :img-src="foto9" />
       <q-carousel-slide :name="10" :img-src="foto10" />
+      <q-carousel-slide :name="11" :img-src="foto11" />
+      <q-carousel-slide :name="12" :img-src="foto12" />
+      <q-carousel-slide :name="13" :img-src="foto13" />
 
       <template v-slot:control>
         <q-carousel-control position="top-right" :offset="[18, 18]">
@@ -79,6 +82,9 @@ import foto7 from "../../../../assets/gallery/foto7.jpg";
 import foto8 from "../../../../assets/gallery/foto8.jpg";
 import foto9 from "../../../../assets/gallery/foto9.jpg";
 import foto10 from "../../../../assets/gallery/foto10.jpg";
+import foto11 from "../../../../assets/gallery/foto11.jpg";
+import foto12 from "../../../../assets/gallery/foto12.jpg";
+import foto13 from "../../../../assets/gallery/foto13.jpg";
 const slide = ref(1);
 const fullscreen = ref(false);
 const autoplay = ref(true);
