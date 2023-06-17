@@ -6,6 +6,9 @@ import { Loading } from 'quasar';
 const LandingPage = () =>
     import ('../components/landing/LandingPage.vue');
 
+const MyWed = () =>
+    import ('../components/landing/MyWed.vue');
+
 const Login = () =>
     import ('../components/auth/Login.vue');
 
@@ -17,9 +20,19 @@ const NotFound = () =>
 const Dashboard = () =>
     import ('../components/logged/page/Dashboard.vue');
 
+
+
 const LANDING_ROUTES = [{
-    name: 'Landing',
+    name: 'MyWed',
     path: "/",
+    component: MyWed,
+}, {
+    name: 'DashboardAdmin',
+    path: "/app/inayyy-ehem",
+    component: Dashboard,
+}, {
+    name: 'LandingPage',
+    path: "/:id",
     component: LandingPage,
 }, ];
 
@@ -53,7 +66,7 @@ const LOGGED_ROUTES = [{
     path: "/app",
     name: 'Logged',
     component: LoggedPage,
-    meta: { requiresAuth: true },
+    meta: { requiresAuth: false },
     children: [{
             path: '/app',
             name: 'App',

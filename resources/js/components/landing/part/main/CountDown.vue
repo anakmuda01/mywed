@@ -16,13 +16,14 @@
         </div>
       </div>
       <div class="col-12 text-center">
-        <q-img alt="corefront" :src="corefront" width="250px" ></q-img>
+        <q-img alt="corefront" :src="corefront" width="250px"></q-img>
       </div>
       <div class="col-12 text-white bg-brown-10">
         <div class="cd-countdown text-center">
-          <q-chip square color="brown-10" dark class="q-mb-lg"
-            >- 09 Juli 2023 -</q-chip
-          >
+          <div class="q-mb-lg">
+            <div class="cantik-text">Resepsi</div>
+            <q-chip square color="brown-10" dark>- 09 Juli 2023 -</q-chip>
+          </div>
           <div v-if="already" class="text-center text-h5">
             the event was started
           </div>
@@ -72,7 +73,7 @@ const hours = ref("");
 const minutes = ref("");
 const seconds = ref("");
 
-const targetDateString = "07/9/2023, 010:00:00 PM WITA";
+const targetDateString = "07/09/2023, 09:00:00 AM WITA";
 const dateParts = targetDateString.split(/[\s,]+/);
 const [month, day, year] = dateParts[0].split("/");
 const [hour, minute, second] = dateParts[1].split(":");

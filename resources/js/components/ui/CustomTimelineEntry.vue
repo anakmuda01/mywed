@@ -1,10 +1,15 @@
 <template>
   <q-card>
     <div
-      class="q-pa-md text-white text-center paci-text judul-event"
+      class="q-pa-md text-white text-center cantik-text judul-event"
       :class="bg"
     >
-      {{ judul }}
+      <div v-if="isMainEvent">
+        <q-icon name="star" color="orange"></q-icon>
+        <span>{{ judul }}</span>
+        <q-icon name="star" color="orange"></q-icon>
+      </div>
+      <span v-else>{{ judul }}</span>
     </div>
     <div class="q-pa-sm text-center q-mt-xs">
       <text-underline-origin
@@ -13,19 +18,23 @@
       ></text-underline-origin>
       <div class="row items-center justify-center">
         <span
-          class="text-h6 paci-text"
-          style="display: inline-block; width: 100px"
+          class="bulan-text cantik-text"
+          style="display: inline-block; width: 4em"
           >{{ bulan }}</span
         >
-        <span class="text-h4 text-weight-bold">{{ angka }}</span>
+        <span class="tanggal-text text-weight-bold">{{ angka }}</span>
         <span
-          class="text-h6 text-weight-bold"
-          style="display: inline-block; width: 100px"
+          class="tahun-text text-weight-bold"
+          style="display: inline-block; width: 4em"
           >{{ tahun }}</span
         >
       </div>
+      <div v-if="waktu" class="q-mt-sm">
+        <div class="text-indigo">Waktu</div>
+        <div style="font-size: 1.2em">{{waktu}}</div>
+      </div>
       <div class="paci-text">Tempat</div>
-      <div class="text-orange-10">{{rumah}}</div>
+      <div class="text-orange-10">{{ rumah }}</div>
       <div>{{ tempat }}</div>
       <div class="q-my-md">
         <geo-button
@@ -55,5 +64,18 @@ const props = defineProps([
   "tahun",
   "rumah",
   "tempat",
+  "waktu",
+  "isMainEvent"
 ]);
 </script>
+
+
+<style>
+.bulan-text, .tahun-text {
+  font-size: 1.5em;
+}
+
+.tanggal-text {
+  font-size: 2.7em;
+}
+</style>

@@ -22,6 +22,11 @@
         </div>
       </div>
     </q-card-section>
+
+    <audio ref="audioPlayer" controls loop>
+      <source :src="musicSrc" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
   </q-card>
 </template>
 
@@ -33,10 +38,14 @@ import AyatSection from "./AyatSection.vue";
 import StorySection from "./StorySection.vue";
 import GallerySection from "./GallerySection.vue";
 
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import AOS from "aos";
 
+import musicSrc from '@/assets/inay_version.mp3';
+const audioPlayer = ref(null);
+
 onMounted(() => {
-    AOS.init();
-})
+  AOS.init();
+  audioPlayer.value.play();
+});
 </script>

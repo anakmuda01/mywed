@@ -83,6 +83,8 @@
                     tahun="2023"
                     rumah="(Rumah Mempelai Wanita)"
                     tempat="Jl. A. Yani Km. 21 Komp. Borneo Indah Jl. Mahoni H.9 RT. 001 RW 001"
+                    waktu="09.00 WITA - 14.00 WITA"
+                    :is-main-event="true"
                   ></custom-timeline-entry>
                 </template>
               </q-timeline-entry>

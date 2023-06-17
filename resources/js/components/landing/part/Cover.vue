@@ -23,7 +23,14 @@
             <div>Kepada Yth.</div>
             <div class="q-mb-sm">Bapak/Ibu/Saudara/i</div>
             <div class="q-mb-sm text-h6 satisfy-text">
-              Keluarga Besar Unit Pengembangan Bahasa UIN Antasari Banjarmasin
+              <div v-if="item.pasangan">
+                <div class="satisfy-text">{{ item.nama }}</div>
+                <div class="satisfy-text">&</div>
+                <div class="satisfy-text">{{ item.pasangan }}</div>
+              </div>
+              <div v-else>
+                <div class="satisfy-text">{{ item.nama }}</div>
+              </div>
             </div>
             <div class="text-caption">
               Mohon maaf apabila terdapat kesalahan dalam penulisan nama /
@@ -67,6 +74,30 @@
 <script setup>
 import bicyclePath from "@/assets/ba.png";
 import flowerPath from "@/assets/flower.png";
+
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+const id = route.params.id;
+
+import { ref, onMounted } from "vue";
+
+import { useQuasar } from 'quasar';
+const $q = useQuasar()
+
+const item = ref({
+  nama: null,
+  pasangan: null,
+});
+
+onMounted(() => {
+    $q.loading.show();
+    axios.get(`/api/undangan/${id}`).then((response) => {
+      item.value = response.data;
+    }).finally(() => {
+      $q.loading.hide();
+    })
+})
 </script>
 
 <style>

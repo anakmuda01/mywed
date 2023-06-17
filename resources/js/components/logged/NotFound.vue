@@ -1,3 +1,3 @@
 <template>
-    <div>tes</div>
+    <div>NOT FFOUND</div>
 </template>
