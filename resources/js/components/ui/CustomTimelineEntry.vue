@@ -40,8 +40,8 @@
         <geo-button
           icon="location_on"
           color="brown"
-          lat="-3.449339"
-          lang="114.715244"
+          lat="-3.4493047"
+          lang="114.7152247"
         ></geo-button>
       </div>
     </div>

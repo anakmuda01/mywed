@@ -21,11 +21,11 @@ const isMobile = $q.platform.is.mobile;
 
 function openGeo() {
   // Then, create a URL to represent the location
-  var locationUrl = "geo:" + props.lat + "," + props.lang;
+  var locationUrl = `geo:${props.lat},${props.lang}?q=${props.lat},${props.lang}`;
 
   // Finally, launch the URL in the Maps app
   if (isMobile) {
-    window.open(locationUrl);
+    window.location.href = locationUrl;
   } else {
     window.open(`https://www.google.com/maps/?q=${props.lat},${props.lang}`);
   }
