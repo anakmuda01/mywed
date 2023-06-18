@@ -1,15 +1,15 @@
 {
-  "_QSpace-c70646b8.js": {
-    "file": "assets/QSpace-c70646b8.js",
+  "_QSpace-83523f9d.js": {
+    "file": "assets/QSpace-83523f9d.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_corefrontSmall-75c08d75.js": {
+  "_corefrontSmall-7d9c6f9f.js": {
     "assets": [
       "assets/corefrontSmall-b3a4bea8.png"
     ],
-    "file": "assets/corefrontSmall-75c08d75.js",
+    "file": "assets/corefrontSmall-7d9c6f9f.js",
     "imports": [
       "resources/js/app.js"
     ]
@@ -52,7 +52,7 @@
     "src": "resources/css/app.css"
   },
   "resources/js/app.css": {
-    "file": "assets/app-466345a0.css",
+    "file": "assets/app-422d2a94.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -67,7 +67,7 @@
       "assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNa-fd84f88b.woff"
     ],
     "css": [
-      "assets/app-466345a0.css"
+      "assets/app-422d2a94.css"
     ],
     "dynamicImports": [
       "resources/js/components/landing/LandingPage.vue",
@@ -77,7 +77,7 @@
       "resources/js/components/logged/NotFound.vue",
       "resources/js/components/logged/page/Dashboard.vue"
     ],
-    "file": "assets/app-6ceb91fe.js",
+    "file": "assets/app-8d7ea42c.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -198,7 +198,7 @@
     "src": "resources/js/assets/sidebyside.jpg"
   },
   "resources/js/components/auth/Login.vue": {
-    "file": "assets/Login-9f2b524d.js",
+    "file": "assets/Login-abcdb54d.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -241,11 +241,11 @@
     "css": [
       "assets/LandingPage-cdf28ccb.css"
     ],
-    "file": "assets/LandingPage-3e6c6830.js",
+    "file": "assets/LandingPage-4b49bfcf.js",
     "imports": [
       "resources/js/app.js",
-      "_QSpace-c70646b8.js",
-      "_corefrontSmall-75c08d75.js"
+      "_QSpace-83523f9d.js",
+      "_corefrontSmall-7d9c6f9f.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/components/landing/LandingPage.vue"
@@ -258,16 +258,16 @@
     "css": [
       "assets/MyWed-b39c4ec5.css"
     ],
-    "file": "assets/MyWed-32955ade.js",
+    "file": "assets/MyWed-73003c15.js",
     "imports": [
-      "_corefrontSmall-75c08d75.js",
+      "_corefrontSmall-7d9c6f9f.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/components/landing/MyWed.vue"
   },
   "resources/js/components/logged/LoggedPage.vue": {
-    "file": "assets/LoggedPage-2177d686.js",
+    "file": "assets/LoggedPage-c3e49a1f.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -275,7 +275,7 @@
     "src": "resources/js/components/logged/LoggedPage.vue"
   },
   "resources/js/components/logged/NotFound.vue": {
-    "file": "assets/NotFound-02ae5254.js",
+    "file": "assets/NotFound-6651b0b1.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -283,9 +283,9 @@
     "src": "resources/js/components/logged/NotFound.vue"
   },
   "resources/js/components/logged/page/Dashboard.vue": {
-    "file": "assets/Dashboard-98d07e7d.js",
+    "file": "assets/Dashboard-fcd24848.js",
     "imports": [
-      "_QSpace-c70646b8.js",
+      "_QSpace-83523f9d.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
