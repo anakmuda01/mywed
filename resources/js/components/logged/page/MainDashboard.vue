@@ -165,7 +165,7 @@ export default {
       axios
         .post("/api/undangan", payload)
         .then((response) => {
-          this.data.push(response.data);
+          this.data.unshift(response.data);
           this.newItem = { nama: "", pasangan: "" };
         })
         .finally(() => {
