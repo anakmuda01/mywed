@@ -8,7 +8,7 @@
     </div>
     <div class="text-h6 text-center">
       <div class="cantik-text">Our <span class="text-red">❤</span> Story</div>
-      <div class="cantik-text" @click="router.push('/app/inayyy-ehem')">
+      <div class="cantik-text">
         Begins Here
       </div>
     </div>
@@ -17,9 +17,6 @@
 
 <script setup>
 import corefront from "@/assets/corefrontSmall.png";
-import { useRouter } from "vue-router";
-
-const router = useRouter();
 </script>
 
 <style>

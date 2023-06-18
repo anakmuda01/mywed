@@ -1,87 +1,102 @@
 <template>
-  <q-page>
-    <q-table
-      title="Undangan Online"
-      :rows="data"
-      :columns="columns"
-      :pagination="pagination"
-      :rows-per-page-options="[10, 20, 50]"
-      :filter="filter"
-    >
-      <template v-slot:top-right="props">
+  <div>
+    <div v-if="!oke">
+      <q-form @submit.prevent="submit">
         <q-input
-          outlined
+          :rules="[(v) => (val !== null && val !== '') || 'Required']"
+          label="hero"
           dense
-          debounce="300"
-          v-model="filter"
-          placeholder="Search"
-          class="q-mr-sm"
-        >
-          <template v-slot:append>
-            <q-icon name="search" />
-          </template>
-        </q-input>
-        <q-btn label="Add" color="primary" @click="showAddDialog = true" />
-      </template>
-
-      <template v-slot:body-cell-link="props">
-        <q-td :props="props">
-          <q-btn color="orange" @click="copyLink(props.row)">copy link</q-btn>
-        </q-td>
-      </template>
-
-      <template v-slot:body-cell-aksi="props">
-        <q-td :props="props">
-          <q-btn
-            @click="openDelete(props.row)"
-            color="red"
-            icon="delete"
-            flat
-            round
-            size="sm"
+          outlined
+          v-model="hero"
+          class="q-mb-sm"
+        ></q-input>
+        <q-btn type="submit" color="orange">submit</q-btn>
+      </q-form>
+    </div>
+    <q-page v-if="oke">
+      <q-table
+        title="Undangan Online"
+        :rows="data"
+        :columns="columns"
+        :pagination="pagination"
+        :rows-per-page-options="[10, 20, 50]"
+        :filter="filter"
+      >
+        <template v-slot:top-right="props">
+          <q-input
+            outlined
+            dense
+            debounce="300"
+            v-model="filter"
+            placeholder="Search"
+            class="q-mr-sm"
           >
-            <q-tooltip class="bg-accent">hapus</q-tooltip>
-          </q-btn>
-        </q-td>
-      </template>
-    </q-table>
+            <template v-slot:append>
+              <q-icon name="search" />
+            </template>
+          </q-input>
+          <q-btn label="Add" color="primary" @click="showAddDialog = true" />
+        </template>
 
-    <q-dialog v-model="showAddDialog" persistent>
-      <q-card style="width: 800px">
-        <q-card-section>
-          <q-form @submit.prevent="saveNewItem">
-            <div>
+        <template v-slot:body-cell-link="props">
+          <q-td :props="props">
+            <q-btn color="orange" @click="copyLink(props.row)">copy link</q-btn>
+          </q-td>
+        </template>
+
+        <template v-slot:body-cell-aksi="props">
+          <q-td :props="props">
+            <q-btn
+              @click="openDelete(props.row)"
+              color="red"
+              icon="delete"
+              flat
+              round
+              size="sm"
+            >
+              <q-tooltip class="bg-accent">hapus</q-tooltip>
+            </q-btn>
+          </q-td>
+        </template>
+      </q-table>
+
+      <q-dialog v-model="showAddDialog" persistent>
+        <q-card style="width: 800px">
+          <q-card-section>
+            <q-form @submit.prevent="saveNewItem">
               <div>
-                <div>Nama</div>
-                <q-input
-                  v-model="newItem.nama"
-                  dense
-                  outlined
-                  :rules="[(val) => !!val || 'Nama is required']"
-                />
-              </div>
+                <div>
+                  <div>Nama</div>
+                  <q-input
+                    v-model="newItem.nama"
+                    dense
+                    outlined
+                    :rules="[(val) => !!val || 'Nama is required']"
+                  />
+                </div>
 
-              <div>
-                <div>Pasangan (optional)</div>
-                <q-input v-model="newItem.pasangan" dense outlined />
-              </div>
+                <div>
+                  <div>Pasangan (optional)</div>
+                  <q-input v-model="newItem.pasangan" dense outlined />
+                </div>
 
-              <div class="row q-mt-md">
-                <q-space></q-space>
-                <q-btn
-                  label="Cancel"
-                  color="secondary"
-                  @click="showAddDialog = false"
-                  class="q-mr-sm"
-                />
-                <q-btn label="Save" color="primary" type="submit" />
+                <div class="row q-mt-md">
+                  <q-space></q-space>
+                  <q-btn
+                    label="Cancel"
+                    color="secondary"
+                    @click="showAddDialog = false"
+                    class="q-mr-sm"
+                  />
+                  <q-btn label="Save" color="primary" type="submit" />
+                </div>
               </div>
-            </div>
-          </q-form>
-        </q-card-section>
-      </q-card>
-    </q-dialog>
-  </q-page>
+            </q-form>
+          </q-card-section>
+        </q-card>
+      </q-dialog>
+    </q-page>
+  </div>
 </template>
 
 <script>
@@ -91,6 +106,8 @@ export default {
   data() {
     return {
       data: [],
+      hero: null,
+      oke: false,
       columns: [
         {
           name: "nama",
@@ -132,6 +149,12 @@ export default {
     };
   },
   methods: {
+    submit() {
+      if(this.hero == 'inashol09') {
+        this.oke = true;
+      }
+    },
+
     saveNewItem() {
       // Add validation if needed
       Loading.show();
@@ -210,7 +233,7 @@ export default {
         persistent: true,
       })
         .onOk(() => {
-          this.destroy(e)
+          this.destroy(e);
         })
         .onOk(() => {
           // console.log('>>>> second OK catcher')
