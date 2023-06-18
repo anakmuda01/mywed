@@ -1,15 +1,15 @@
 {
-  "_QSpace-d856f352.js": {
-    "file": "assets/QSpace-d856f352.js",
+  "_QSpace-13731c37.js": {
+    "file": "assets/QSpace-13731c37.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_corefrontSmall-030f3cd1.js": {
+  "_corefrontSmall-19390bc3.js": {
     "assets": [
       "assets/corefrontSmall-b3a4bea8.png"
     ],
-    "file": "assets/corefrontSmall-030f3cd1.js",
+    "file": "assets/corefrontSmall-19390bc3.js",
     "imports": [
       "resources/js/app.js"
     ]
@@ -77,7 +77,7 @@
       "resources/js/components/logged/NotFound.vue",
       "resources/js/components/logged/page/Dashboard.vue"
     ],
-    "file": "assets/app-67ff35e7.js",
+    "file": "assets/app-908a20b5.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -198,7 +198,7 @@
     "src": "resources/js/assets/sidebyside.jpg"
   },
   "resources/js/components/auth/Login.vue": {
-    "file": "assets/Login-c5db9928.js",
+    "file": "assets/Login-f183c84a.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -241,11 +241,11 @@
     "css": [
       "assets/LandingPage-cdf28ccb.css"
     ],
-    "file": "assets/LandingPage-3bc8239e.js",
+    "file": "assets/LandingPage-a647ca68.js",
     "imports": [
       "resources/js/app.js",
-      "_QSpace-d856f352.js",
-      "_corefrontSmall-030f3cd1.js"
+      "_QSpace-13731c37.js",
+      "_corefrontSmall-19390bc3.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/components/landing/LandingPage.vue"
@@ -258,16 +258,16 @@
     "css": [
       "assets/MyWed-b39c4ec5.css"
     ],
-    "file": "assets/MyWed-44fba70e.js",
+    "file": "assets/MyWed-fce1149a.js",
     "imports": [
-      "_corefrontSmall-030f3cd1.js",
+      "_corefrontSmall-19390bc3.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/components/landing/MyWed.vue"
   },
   "resources/js/components/logged/LoggedPage.vue": {
-    "file": "assets/LoggedPage-b909f92d.js",
+    "file": "assets/LoggedPage-fef89bac.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -275,7 +275,7 @@
     "src": "resources/js/components/logged/LoggedPage.vue"
   },
   "resources/js/components/logged/NotFound.vue": {
-    "file": "assets/NotFound-c8d4002e.js",
+    "file": "assets/NotFound-8d2980f4.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -283,9 +283,9 @@
     "src": "resources/js/components/logged/NotFound.vue"
   },
   "resources/js/components/logged/page/Dashboard.vue": {
-    "file": "assets/Dashboard-9fbde41f.js",
+    "file": "assets/Dashboard-1b922494.js",
     "imports": [
-      "_QSpace-d856f352.js",
+      "_QSpace-13731c37.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,

@@ -1,6 +1,6 @@
 <template>
   <q-card>
-    <q-card-section>
+    <q-card-section style="overflow: hidden !important;">
       <div class="row bg-brown" style="padding-bottom: 50px">
         <div id="home" class="col-12 q-px-sm q-mt-sm">
           <count-down></count-down>
