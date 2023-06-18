@@ -45,7 +45,10 @@
         </q-card>
         <div class="text-center">
           <div class="cantik-text" style="color: black">
-            dev with <span class="text-red">❤</span> by <a target="_blank" href="https://www.instagram.com/fhmsholihin/">me</a>
+            dev with <span class="text-red">❤</span> by
+            <a target="_blank" href="https://www.instagram.com/fhmsholihin/"
+              >me</a
+            >
           </div>
         </div>
         <q-card
@@ -78,9 +81,10 @@
 import bicyclePath from "@/assets/ba.png";
 import flowerPath from "@/assets/flower.png";
 
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
+const router = useRouter();
 const id = route.params.id;
 
 import { ref, onMounted } from "vue";
@@ -98,10 +102,17 @@ onMounted(() => {
   axios
     .get(`/api/undangan/${id}`)
     .then((response) => {
+      if (!response.data) {
+        router.push("/");
+        return;
+      }
       item.value = response.data;
     })
     .finally(() => {
       $q.loading.hide();
+    })
+    .catch((e) => {
+      router.push("/");
     });
 });
 </script>
