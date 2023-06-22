@@ -26,9 +26,32 @@
             <template v-slot:top-left="props">
               <div class="row">
                 <div class="col-12 text-h5">Love Story Indo</div>
-                <div>
-                  <div>Status Aktif</div>
-                  <q-toggle v-model="toggle" color="green" />
+                <div class="q-mb-sm">
+                  <div>
+                    Status :
+                    <span :class="toggle ? 'text-primary' : 'text-red'">{{
+                      toggle ? "Sedang Aktif" : "Dimatikan"
+                    }}</span>
+                  </div>
+                  <q-btn
+                    dense
+                    size="sm"
+                    class="q-mr-sm"
+                    color="primary"
+                     v-show="!toggle"
+                    @click="toggleAktif(1)"
+                  >
+                    Aktifkan
+                  </q-btn>
+                  <q-btn
+                    dense
+                    size="sm"
+                    color="red"
+                    v-show="toggle"
+                    @click="toggleAktif(0)"
+                  >
+                    Matikan
+                  </q-btn>
                 </div>
               </div>
             </template>
@@ -161,11 +184,6 @@ export default {
     };
   },
 
-  watch: {
-    toggle() {
-      this.toggleAktif();
-    },
-  },
   methods: {
     submit() {
       if (this.hero == "inashol09") {
@@ -173,11 +191,11 @@ export default {
       }
     },
 
-    toggleAktif() {
+    toggleAktif(val) {
       Loading.show();
       let payload = {
         key: "924rjnjefj9e9re###*w",
-        indo_aktif: this.toggle ? 1 : 0,
+        indo_aktif: val,
       };
       axios
         .post("/api/config-toggle-story-indo", payload)
