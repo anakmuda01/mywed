@@ -1,22 +1,22 @@
 {
-  "_QSpace-72186f70.js": {
-    "file": "assets/QSpace-72186f70.js",
+  "_QSpace-24f21fcb.js": {
+    "file": "assets/QSpace-24f21fcb.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_QTable-5ea6805d.js": {
-    "file": "assets/QTable-5ea6805d.js",
+  "_QTable-331a9308.js": {
+    "file": "assets/QTable-331a9308.js",
     "imports": [
       "resources/js/app.js",
-      "_QSpace-72186f70.js"
+      "_QSpace-24f21fcb.js"
     ]
   },
-  "_corefrontSmall-408a24f6.js": {
+  "_corefrontSmall-bdedcc39.js": {
     "assets": [
       "assets/corefrontSmall-b3a4bea8.png"
     ],
-    "file": "assets/corefrontSmall-408a24f6.js",
+    "file": "assets/corefrontSmall-bdedcc39.js",
     "imports": [
       "resources/js/app.js"
     ]
@@ -85,7 +85,7 @@
       "resources/js/components/logged/page/Dashboard.vue",
       "resources/js/components/logged/page/LoveStory.vue"
     ],
-    "file": "assets/app-8227939a.js",
+    "file": "assets/app-ef0de7b8.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -206,7 +206,7 @@
     "src": "resources/js/assets/sidebyside.jpg"
   },
   "resources/js/components/auth/Login.vue": {
-    "file": "assets/Login-924c3087.js",
+    "file": "assets/Login-060f6a6f.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -249,11 +249,11 @@
     "css": [
       "assets/LandingPage-cdf28ccb.css"
     ],
-    "file": "assets/LandingPage-148c8d68.js",
+    "file": "assets/LandingPage-792b19b2.js",
     "imports": [
       "resources/js/app.js",
-      "_QSpace-72186f70.js",
-      "_corefrontSmall-408a24f6.js"
+      "_QSpace-24f21fcb.js",
+      "_corefrontSmall-bdedcc39.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/components/landing/LandingPage.vue"
@@ -266,16 +266,16 @@
     "css": [
       "assets/MyWed-b39c4ec5.css"
     ],
-    "file": "assets/MyWed-b667d5e0.js",
+    "file": "assets/MyWed-660636a8.js",
     "imports": [
-      "_corefrontSmall-408a24f6.js",
+      "_corefrontSmall-bdedcc39.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/components/landing/MyWed.vue"
   },
   "resources/js/components/logged/LoggedPage.vue": {
-    "file": "assets/LoggedPage-f3b83cd4.js",
+    "file": "assets/LoggedPage-e4f60836.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -283,7 +283,7 @@
     "src": "resources/js/components/logged/LoggedPage.vue"
   },
   "resources/js/components/logged/NotFound.vue": {
-    "file": "assets/NotFound-64ecf560.js",
+    "file": "assets/NotFound-2dd7dbe2.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -291,21 +291,21 @@
     "src": "resources/js/components/logged/NotFound.vue"
   },
   "resources/js/components/logged/page/Dashboard.vue": {
-    "file": "assets/Dashboard-3fa7b219.js",
+    "file": "assets/Dashboard-202abcf0.js",
     "imports": [
-      "_QSpace-72186f70.js",
+      "_QSpace-24f21fcb.js",
       "resources/js/app.js",
-      "_QTable-5ea6805d.js"
+      "_QTable-331a9308.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/components/logged/page/Dashboard.vue"
   },
   "resources/js/components/logged/page/LoveStory.vue": {
-    "file": "assets/LoveStory-c215e06b.js",
+    "file": "assets/LoveStory-1755abd5.js",
     "imports": [
       "resources/js/app.js",
-      "_QTable-5ea6805d.js",
-      "_QSpace-72186f70.js"
+      "_QTable-331a9308.js",
+      "_QSpace-24f21fcb.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/components/logged/page/LoveStory.vue"

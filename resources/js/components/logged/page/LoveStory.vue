@@ -177,7 +177,7 @@ export default {
       Loading.show();
       let payload = {
         key: "924rjnjefj9e9re###*w",
-        indo_aktif: this.toggle,
+        indo_aktif: this.toggle ? 1 : 0,
       };
       axios
         .post("/api/config-toggle-story-indo", payload)
