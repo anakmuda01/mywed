@@ -20,7 +20,7 @@
         "@tinymce/tinymce-vue": "^5.1.0",
         "aos": "^2.3.4",
         "dompurify": "^3.0.1",
-        "pinia": "^2.0.33",
+        "pinia": "^2.1.4",
         "quasar": "^2.11.10",
         "tinymce": "^6.4.1",
         "vue-router": "^4.1.6"

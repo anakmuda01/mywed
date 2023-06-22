@@ -12,6 +12,30 @@
         top: 0,
       }"
     ></div>
+    <div
+      :style="{
+        position: 'absolute',
+        right: '7px',
+        top: '11px',
+        zIndex: '10000',
+      }"
+      v-if="indo_aktif"
+    >
+      <div class="q-gutter-sm">
+        <q-option-group
+          :options="[
+            { label: 'Bahasa Indonesia', value: 'indo' },
+            { label: 'English', value: 'english' },
+          ]"
+          type="radio"
+          v-model="lang"
+          color="orange"
+          class="text-white text-caption"
+          dense
+          size="xs"
+        />
+      </div>
+    </div>
     <q-card class="q-px-md q-py-md" style="background: transparent">
       <q-timeline
         color="orange"
@@ -23,7 +47,7 @@
         "
       >
         <q-timeline-entry
-          v-for="(item, index) in events"
+          v-for="(item, index) in stories"
           :key="index"
           data-aos="fade-right"
           data-aos-offset="200"
@@ -47,7 +71,10 @@
       </q-timeline>
     </q-card>
 
-    <q-card class="q-pa-sm q-mt-xs" style="position: relative; overflow: hidden">
+    <q-card
+      class="q-pa-sm q-mt-xs"
+      style="position: relative; overflow: hidden"
+    >
       <div
         class="text-center q-pt-lg"
         style="padding-bottom: 100px; background: #b05113; color: white"
@@ -124,44 +151,28 @@ import LoveStoryBg from "../../../../assets/love-story-bg.png";
 import SideBySide from "../../../../assets/sidebyside.jpg";
 import InayKursi from "../../../../assets/inaykursi.png";
 import SholKursi from "../../../../assets/sholkursi.png";
-const events = [
-  {
-    date: "16 Nov 2022",
-    text: "Our 1st Chat (WA)",
-  },
-  {
-    date: "01 Dec 2022",
-    text: "His 1st Proposal",
-  },
-  {
-    date: "5 Dec 2022",
-    text: "She's not ready yet - the beginning of silent treatment",
-  },
-  {
-    date: "15 Feb 2023",
-    text: "The end of silent treatment where our story began",
-  },
-  {
-    date: "11 Mar 2023",
-    text: "He proposed again and suggested her to pray istikhara, but she did it again. That's our last chat",
-  },
-  {
-    date: "16 Mar 2023",
-    text: "Her first istikhara prayer, and she gave him a chance to meet her parents",
-  },
-  {
-    date: "22 Mar 2023",
-    text: "He met her parents alone~",
-  },
-  {
-    date: "26 Mar 2023",
-    text: "Our parents met and we're officially engaged",
-  },
-  {
-    date: "07 Jul 2023",
-    text: "Our brand-new day begins",
-  },
-];
+
+import { useCoreStore } from "@/stores/core.store";
+const core = useCoreStore();
+import { storeToRefs } from "pinia";
+const { en_stories, indo_aktif, indo_stories } = storeToRefs(core);
+
+import { ref, watch, onMounted } from "vue";
+const lang = ref("english");
+
+const stories = ref([]);
+
+watch(lang, (val) => {
+  if (val == "indo") {
+    stories.value = core.indo_stories;
+  } else if (val == "english") {
+    stories.value = core.en_stories;
+  }
+});
+
+onMounted(() => {
+  stories.value = core.en_stories;
+});
 </script>
 
 

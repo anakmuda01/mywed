@@ -20,6 +20,9 @@ const NotFound = () =>
 const Dashboard = () =>
     import ('../components/logged/page/Dashboard.vue');
 
+const LoveStory = () =>
+    import ('../components/logged/page/LoveStory.vue');
+
 
 
 const LANDING_ROUTES = [{
@@ -34,6 +37,10 @@ const LANDING_ROUTES = [{
     name: 'LandingPage',
     path: "/:id",
     component: LandingPage,
+}, {
+    name: 'LoveStory',
+    path: "/app/bakisah-cinta",
+    component: LoveStory,
 }, ];
 
 const AUTH_ROUTES = [{

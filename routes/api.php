@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\API\StoryIndoController;
+use App\Http\Controllers\API\ToggleStoryController;
 use App\Http\Controllers\API\UndanganController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +22,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::apiResources([
-    'undangan' => UndanganController::class
+    'undangan' => UndanganController::class,
+    'love-story-indo' => StoryIndoController::class
 ]);
 
 Route::post('/hapus-undangan', [UndanganController::class, 'destroy']);
+Route::post('/hapus-love-story-indo', [UndanganController::class, 'destroy']);
+
+Route::post('/config-toggle-story-indo', [ToggleStoryController::class, 'toggleStoryIndo']);

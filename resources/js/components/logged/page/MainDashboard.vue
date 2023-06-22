@@ -35,7 +35,12 @@
               <q-icon name="search" />
             </template>
           </q-input>
-          <q-btn label="Add" color="primary" @click="showAddDialog = true" />
+          <q-btn
+            :class="$q.screen.xs ? 'q-mt-sm' : ''"
+            label="Add"
+            color="primary"
+            @click="showAddDialog = true"
+          />
         </template>
 
         <template v-slot:body-cell-link="props">
@@ -150,7 +155,7 @@ export default {
   },
   methods: {
     submit() {
-      if(this.hero == 'inashol09') {
+      if (this.hero == "inashol09") {
         this.oke = true;
       }
     },
