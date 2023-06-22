@@ -104,7 +104,7 @@ class UndanganController extends Controller
         $undangan = Undangan::where('link', $id)->firstOrFail();
         return [
             'undangan' => $undangan,
-            'indo_aktif' => $indo_aktif,
+            'indo_aktif' => (int) $indo_aktif,
             'indo_stories' => $indo_stories,
             'en_stories' => $en_stories
         ];
